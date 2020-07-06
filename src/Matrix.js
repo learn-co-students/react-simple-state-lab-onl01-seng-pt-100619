@@ -17,5 +17,20 @@ export default class Matrix extends Component {
       </div>
     )
   }
-  
+}
+
+function buildMatrix() {
+  let matrix = []
+  for (let i = 0; i < 10; i++) {
+    let innerMatrix = []
+    for (let j = 0; j < 10; j++) {
+      innerMatrix.push('#F00')
+    }
+    matrix.push(innerMatrix);
+  }
+  return matrix;
+}
+
+Matrix.defaultProps = {
+  values: buildMatrix()
 }
